@@ -11,20 +11,20 @@
 <body>
 
     <script>
-        const formdata = new FormData();
+        const formData = new FormData();
 
-        formdata.append('nombre', 'Mr. Michi');
-        formdata.append('edad', '14');
+        formData.append('nombre', 'Mr. Michi');
+        formData.append('edad', '14');
 
-        fetch("server.php"{
-            body: formdata,
+        fetch("server.php?color=naranja", {
+            body: formData,
             method: "POST"
-        });
+        })
 
-        .then(res => res.text())
-        .then(date => {
-            console.log(data);
-        });
+            .then(res => res.text())
+            .then(data => {
+                console.log(data);
+            })
     </script>
 
 </body>
